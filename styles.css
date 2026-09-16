@@ -304,6 +304,9 @@
 .hero-section-faq .section-picture > div {
   max-height: 12rem;
 }
+.hero-section-faq h1 {
+  margin-left: 2rem;
+}
 
 @media (max-width: 768px) {
   .service-card,
@@ -332,6 +335,7 @@
   }
   .hero-section-faq h1 {
     text-align: center;
+    margin-left: 0;
   }
 }
 
