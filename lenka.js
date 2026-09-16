@@ -127,6 +127,7 @@ const initSmoothScroll = () => {
                 e.preventDefault();
 
                 // Close mobile menu if open
+                const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
                 if (!mobileMenuOverlay.classList.contains("hidden")) {
                     toggleMenu(false);
                 }
@@ -150,6 +151,7 @@ const initSmoothScroll = () => {
             e.preventDefault();
 
             // Close mobile menu if open
+            const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
             if (!mobileMenuOverlay.classList.contains("hidden")) {
                 toggleMenu(false);
             }
@@ -162,28 +164,28 @@ const initSmoothScroll = () => {
     });
 };
 
+const toggleMenu = (isOpen) => {
+    const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+    if (isOpen) {
+        mobileMenuOverlay.classList.remove("hidden");
+        setTimeout(() => {
+            mobileMenuOverlay.classList.remove("translate-x-full");
+        }, 10);
+        document.body.style.overflow = "hidden";
+    } else {
+        mobileMenuOverlay.classList.add("translate-x-full");
+        setTimeout(() => {
+            mobileMenuOverlay.classList.add("hidden");
+        }, 500);
+        document.body.style.overflow = "auto";
+    }
+};
+
 // Mobile Menu Logic
 const initMobileMenu = () => {
     const mobileMenuBtn = document.getElementById("mobile-menu-btn");
     const closeMenuBtn = document.getElementById("close-menu-btn");
-    const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
     const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
-
-    const toggleMenu = (isOpen) => {
-        if (isOpen) {
-            mobileMenuOverlay.classList.remove("hidden");
-            setTimeout(() => {
-                mobileMenuOverlay.classList.remove("translate-x-full");
-            }, 10);
-            document.body.style.overflow = "hidden";
-        } else {
-            mobileMenuOverlay.classList.add("translate-x-full");
-            setTimeout(() => {
-                mobileMenuOverlay.classList.add("hidden");
-            }, 500);
-            document.body.style.overflow = "auto";
-        }
-    };
 
     mobileMenuBtn.addEventListener("click", () => toggleMenu(true));
     closeMenuBtn.addEventListener("click", () => toggleMenu(false));
@@ -218,6 +220,16 @@ const initMobileMenu = () => {
     }, observerOptions);
 };
 
+const initReserveButtons = () => {
+    const reserveBtns = document.querySelectorAll(".reserve-btn");
+    reserveBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            document.location.href = 'index.html#contact';
+            toggleMenu(false);
+        });
+    });
+};
+
 document.querySelectorAll("section").forEach((section) => {
     if (
         !section.classList.contains("page-section") &&
@@ -237,4 +249,5 @@ document.querySelectorAll("section").forEach((section) => {
 document.addEventListener("DOMContentLoaded", () => {
     initSmoothScroll();
     initMobileMenu();
+    initReserveButtons();
 });
