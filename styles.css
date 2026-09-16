@@ -343,6 +343,9 @@
   width: 100%;
   border: 1px solid #cececc;
   height: 400px;
+  border-radius: 1rem;
+  padding: 4px;
+  background: white;
 }
 
 @media (min-width: 1200px) {
