@@ -339,6 +339,12 @@
   }
 }
 
+#google-maps-iframe {
+  width: 100%;
+  border: 1px solid #cececc;
+  height: 400px;
+}
+
 @media (min-width: 1200px) {
   .faq-grid > .service-card:nth-child(odd) {
     /*margin-right: 8rem;*/
