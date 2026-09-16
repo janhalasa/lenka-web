@@ -294,6 +294,17 @@
   padding-top: 5rem;
 }
 
+.list-normal {
+  padding-inline-start: 2rem;
+}
+
+.hero-section-faq {
+  padding-top: 7rem;
+}
+.hero-section-faq .section-picture > div {
+  max-height: 12rem;
+}
+
 @media (max-width: 768px) {
   .service-card,
   .card-with-text {
@@ -311,5 +322,24 @@
 
   .page-section.page-section-cardless > .page-container {
     padding-inline: 32px;
+  }
+
+  .hero-section-faq {
+    padding-top: 9rem;
+  }
+  .hero-section-faq .section-picture {
+    display: none;
+  }
+  .hero-section-faq h1 {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .faq-grid > .service-card:nth-child(odd) {
+    /*margin-right: 8rem;*/
+  }
+  .faq-grid > .service-card:nth-child(even) {
+    /*margin-left: 8rem;*/
   }
 }

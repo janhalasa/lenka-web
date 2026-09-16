@@ -1,0 +1,436 @@
+<!doctype html>
+
+<html class="scroll-smooth" lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>SereneMind Psychologie | Najděte jasnost a spojení</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="styles.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet"
+  />
+  <script id="tailwind-config" src="lenka.js"></script>
+</head>
+<body
+  class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed"
+  data-mode="connect"
+>
+<!-- Mobile Menu Overlay -->
+<div
+  class="fixed inset-0 z-[60] bg-surface transition-transform duration-500 translate-x-full hidden"
+  id="mobile-menu-overlay"
+>
+  <div class="flex flex-col h-full px-gutter py-md">
+    <div class="flex justify-between items-center h-20 mb-xl">
+      <a
+        class="font-headline-md text-headline-md font-semibold text-primary brand-link"
+        href="#"
+      >
+        Lenka Hermanová &ndash; psycholog
+      </a>
+      <button
+        class="text-on-surface hover:text-primary transition-colors"
+        id="close-menu-btn"
+      >
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-lg text-center">
+      <a class="mobile-nav-link" href="index.html#services">Služby</a>
+      <a class="mobile-nav-link" href="index.html#approach">Přístup</a>
+      <a class="mobile-nav-link" href="index.html#about">O mně</a>
+      <a class="mobile-nav-link" href="index.html#contact">Kontakt</a>
+      <a class="mobile-nav-link" href="faq.html">Často kladené otázky</a>
+      <div class="pt-lg w-full px-md">
+        <button class="button button--primary w-full">
+          Rezervovat sezení
+        </button>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- TopNavBar -->
+<header
+  class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm h-20 transition-all duration-300"
+>
+  <div class="page-container flex justify-between items-center h-full">
+    <a
+      class="font-headline-md text-headline-md font-semibold text-primary dark:text-primary-fixed cursor-pointer transition-all duration-300 active:scale-95 brand-link"
+      href="#"
+    >
+      Lenka Hermanová &ndash; psycholog</a
+    >
+    <nav class="hidden md:flex gap-lg items-center">
+      <a class="nav-link" href="index.html#services">Služby</a>
+      <a class="nav-link" href="index.html#approach">Přístup</a>
+      <a class="nav-link" href="index.html#about">O mně</a>
+      <a class="nav-link" href="index.html#contact">Kontakt</a>
+      <a class="nav-link" href="faq.html">Otázky</a>
+      <button
+        class="button button--primary ml-md !px-md !py-sm cursor-pointer"
+      >
+        Rezervovat sezení
+      </button>
+    </nav>
+    <button class="md:hidden text-primary" id="mobile-menu-btn">
+      <span class="material-symbols-outlined text-2xl">menu</span>
+    </button>
+  </div>
+</header>
+<main>
+  <!-- Hero Section -->
+  <section
+    class="page-section hero-section-faq hero-section relative flex items-center overflow-hidden min-h-[240px]"
+    id="hero"
+  >
+    <div class="page-container content-grid relative z-10">
+      <div class="md:col-span-7 space-y-md">
+        <h1
+          class="font-headline-xl text-headline-xl text-on-surface leading-tight"
+        >
+          Často kladené otázky
+        </h1>
+      </div>
+      <div class="md:col-span-5 relative section-picture">
+        <div
+          class="rounded-[2rem] mt-md overflow-hidden atmospheric-shadow"
+        >
+          <img
+            alt="Serene therapy office"
+            class="cover-image"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2795vI8NshGDZ9ox2v2M9Mneyh8cAuAo6iiKB4UxjVkOB0DiaQ-qKyGa7jGg_z46ljsDjyy_Al4Z-ikKJknMDtj7-C8ut-fekJcXHwwNB-qdosKTUTruSb9T-nBxABVAn0HJsq-h1RjRFGDD4-E9WfgA_pQ7_9hAPDffH0GlvI9Ge9TdFdemqCbTnb1OY2swdlpeDmk0S4x-DB7TcB3SrAn-d8jqr0XGAMYtLLh9GkmBuxaOooAd2"
+          />
+        </div>
+        <div
+          class="absolute -bottom-md -left-md bg-surface-container-lowest p-md rounded-xl atmospheric-shadow max-w-[200px]"
+        >
+          <span class="material-symbols-outlined text-primary text-3xl">crossword</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section bg-surface-container-low">
+    <div class="page-container">
+      <div class="grid grid-cols-1 md:grid-cols-1 gap-lg faq-grid">
+
+        <div class="service-card atmospheric-shadow m-l0-r12">
+          <div class="service-card__header">
+            <div class="icon-badge icon-badge--primary">
+                  <span class="material-symbols-outlined text-primary text-3xl"
+                  >psychology_alt</span
+                  >
+            </div>
+            <h3 class="subsection-title">
+              Co je to adlerovská psychoterapie a čím se liší od jiných směrů?
+            </h3>
+          </div>
+          <p class="body-copy">
+            Adlerovská (neboli individuální) psychologie, kterou založil Alfred Adler, je holistický, sociální a teleologický směr.
+          </p>
+          <ul class="list-disc list-normal mt-md">
+            <li><b>Celostní pohled (Holismus):</b> Na člověka se nedíváme jako na soubor diagnóz nebo rozdělených částí (mysl vs. tělo), ale jako na nedělitelný celek. Všechny vaše složky (vědomí, nevědomí, emoce i tělo) tvoří jeden propojený systém směřující ke stejnému psychologickému cíli.</li>
+            <li><b>Růstový model namísto medicínského:</b> Adlerovská terapie nevnímá klienty jako duševně nemocné, které je třeba „vyléčit“, ale jako lidi, kteří vlivem životních okolností ztratili odvahu – jsou tedy „znechucení“ či „odrazení“. Samotná terapie je proto vnímána jako proces systematického povzbuzování.</li>
+            <li><b>Sociální zakotvenost:</b> Člověka nelze studovat v izolaci. Vše, co děláme, cítíme a jak myslíme, se odehrává v sociálním kontextu a souvisí s našimi mezilidskými vztahy.</li>
+          </ul>
+        </div>
+
+        <div class="service-card atmospheric-shadow faq-item">
+          <div class="service-card__header">
+            <div class="icon-badge icon-badge--secondary">
+                  <span class="material-symbols-outlined text-3xl"
+                  >question_mark</span
+                  >
+            </div>
+            <h3 class="subsection-title">Jak u vás probíhá první setkání (úvodní rozhovor)?</h3>
+          </div>
+          <p class="body-copy mb-md">
+            V adlerovské terapii věříme v absolutní sociální rovnost. Naše setkání probíhají na horizontální rovině – nejsme v pozici nadřízeného „experta“ a podřízeného „pacienta“. Společně pracujeme jako rovnocenní partneři. Vy jste největším expertem na svůj vlastní život a já jsem vaší průvodkyní. Během úvodního rozhovoru budeme zkoumat nejen to, co vás trápí (diagnostická část), ale především to, co ve vašem životě funguje dobře – vaše vnitřní zdroje, silné stránky a přednosti (hodnotící část). Podíváme se také na to, jak se vám daří naplňovat základní životní úkoly (práci, přátelství a lásku).
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section bg-surface-container">
+    <div class="page-container">
+      <div class="grid grid-cols-1 md:grid-cols-1 gap-lg faq-grid">
+
+        <div class="service-card atmospheric-shadow">
+          <div class="service-card__header">
+            <div class="icon-badge icon-badge--primary">
+                  <span class="material-symbols-outlined text-3xl"
+                  >tooltip</span
+                  >
+            </div>
+            <h3 class="subsection-title">Co přesně znamená „odvaha k nedokonalosti“?</h3>
+          </div>
+          <p class="body-copy mb-md">
+            Je to jeden z nejosvobozujících konceptů zdravého společenského života. Znamená to ochotu jednat a posouvat se vpřed i tehdy, když je výsledek nejistý a hrozí, že uděláme chybu. Mnoho lidí trpí úzkostmi a pocity selhání, protože se snaží být dokonalí a bezchybní. Odvaha k nedokonalosti nám umožňuje přijmout svou lidskou omylnost, přestat se paralyzovat strachem ze selhání a vnímat chyby jako přirozenou a užitečnou součást učení a růstu.
+          </p>
+        </div>
+
+        <div class="service-card atmospheric-shadow">
+          <div class="service-card__header">
+            <div class="icon-badge icon-badge--secondary">
+                  <span class="material-symbols-outlined text-3xl"
+                  >cognition_2</span
+                  >
+            </div>
+            <h3 class="subsection-title">Jak v terapii pracujete s „ranými vzpomínkami“?</h3>
+          </div>
+          <p class="body-copy mb-md">
+            Rané vzpomínky (události z dětství přibližně do 10 let) jsou v adlerovském přístupu klíčovým nástrojem a cenným zlatem. Naše paměť je totiž přirozeně selektivní. Z tisíců prožitých hodin v dětství si pamatujeme jen ty fragmenty, které odpovídají našemu současnému pohledu na sebe, druhé a svět. Vzpomínky vnímáme jako metafory a zrcadlo vašeho současného „životního stylu“. V terapii je společně prozkoumáme, abychom odhalili vaše nevědomá přesvědčení a pravidla hry, kterými se v životě řídíte. Někdy tyto vzpomínkové obrazy můžeme tvořivě přepsat a transformovat, což přináší okamžitou úlevu a nové cesty k řešení současných problémů.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section bg-surface-container-high">
+    <div class="page-container">
+      <div class="grid grid-cols-1 md:grid-cols-1 gap-lg faq-grid">
+
+        <div class="service-card atmospheric-shadow">
+          <div class="service-card__header">
+            <div class="icon-badge icon-badge--primary">
+                  <span class="material-symbols-outlined text-primary text-3xl"
+                  >kid_star</span
+                  >
+            </div>
+            <h3 class="subsection-title">Co jsou to ty „4B“ ( z angličtiny klíčová C)?</h3>
+          </div>
+          <p class="body-copy">
+            Jedná se o čtyři základní psychologické potřeby, které pro zdravé fungování a pocit vlastní hodnoty potřebuje naplňovat každý z nás:
+          </p>
+          <ol class="list-decimal list-normal mt-md">
+            <li><b>Být propojený (Connection):</b> Potřeba patřit do společenství, mít bezpečné vztahy a cítit, že nejsem sám.</li>
+            <li><b>Být schopný (Capability):</b> Vědomí, že dokážu zvládat životní úkoly, řešit problémy a rozvíjet své dovednosti.</li>
+            <li><b>Být důležitý (Count):</b> Pocit, že na mně záleží, že mám pro ostatní hodnotu a mohu k jejich životům přispívat.</li>
+            <li><b>Být odvážný (Courage):</b> Odvaha čelit neznámému, posouvat své hranice a překonávat obtíže.</li>
+          </ol>
+        </div>
+
+        <div class="service-card atmospheric-shadow">
+          <div class="service-card__header">
+            <div class="icon-badge icon-badge--secondary">
+                  <span class="material-symbols-outlined text-primary text-3xl"
+                  >neurology</span
+                  >
+            </div>
+            <h3 class="subsection-title">Co je to „soukromá logika“ a jak se liší od „zdravého rozumu“?</h3>
+          </div>
+          <p class="body-copy">
+            Jedná se o čtyři základní psychologické potřeby, které pro zdravé fungování a pocit vlastní hodnoty potřebuje naplňovat každý z nás:
+          </p>
+          <ul class="list-bullet list-normal mt-md">
+            <li><b>Soukromá logika:</b> Je váš jedinečný, vnitřní systém přesvědčení a závěrů o světě a o sobě, který jste si vytvořili v raném dětství. Podle této kognitivní mapy se v životě orientujete. Někdy se však v této mapě vyskytují „základní chyby“ (např. přesvědčení: „Musím mít vše pod kontrolou, jinak jsem v nebezpečí“).</li>
+            <li><b>Zdravý rozum (Common sense):</b> Reprezentuje obecné, kooperativní a užitečné normy lidského společenství. V terapii společně hledáme soulad mezi vaší soukromou logikou a zdravým rozumem, abyste mohli žít s větším klidem, menším stresem a v lepší spolupráci s lidmi kolem vás.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section bg-surface-container-low">
+    <div class="page-container">
+      <div class="grid grid-cols-1 md:grid-cols-1 gap-lg faq-grid">
+
+        <div class="service-card atmospheric-shadow">
+          <div class="service-card__header">
+            <div class="icon-badge icon-badge--primary">
+                  <span class="material-symbols-outlined text-3xl"
+                  >psychiatry</span
+                  >
+            </div>
+            <h3 class="subsection-title">Co znamená, že chování a pocity jsou „cílené“ (teleologické)?</h3>
+          </div>
+          <p class="body-copy mb-md">
+            Adlerovská psychologie věří, že lidé nejsou vlečeni svými instinkty ani determinováni pouze minulostí. Veškeré naše chování i emoce (včetně úzkostí, vzteku či smutku) mají svůj skrytý účel a cíl. Vždy se podvědomě pohybujeme od pociťovaného nedostatku (mínusu) k cíli bezpečí, vlivu a přiměřenosti (plusu). V terapii používáme například techniku zvanou „Otázka“ („Jak by se změnil váš život, kdybyste tyto potíže neměli?“). Odpověď nám často odhalí, jakému konkrétnímu životnímu úkolu či obávanému selhání se skrze své symptomy nevědomky vyhýbáte. Jakmile tento účel pochopíme, můžeme najít zdravější a odvážnější způsoby, jak dosáhnout bezpečí.
+          </p>
+        </div>
+
+        <div class="service-card atmospheric-shadow">
+          <div class="service-card__header">
+            <div class="icon-badge icon-badge--secondary">
+                  <span class="material-symbols-outlined text-3xl"
+                  >alarm</span
+                  >
+            </div>
+            <h3 class="subsection-title">Jak dlouho bude terapie trvat?</h3>
+          </div>
+          <p class="body-copy mb-md">
+            Terapie je velmi flexibilní a délku sezení vždy domlouváme společně na základě vašich cílů. Adlerovská psychoterapie má dlouhou tradici krátkodobé, časově ohraničené práce orientované na přítomnost a budoucnost. Často pracujeme v cyklech kolem 15 až 25 sezení (někdy i 20 či méně), která bývají vysoce efektivní a zaměřená na konkrétní životní změnu. Pokud je to však užitečné a dohodneme se na tom, můžeme se věnovat i dlouhodobějšímu a hlubšímu zkoumání osobnosti a životního stylu.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+  <section class="page-section bg-surface-container" id="contact">
+    <div class="page-container">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+        <div class="lg:col-span-4 space-y-lg">
+          <div>
+            <h2 class="section-title mb-md">Kontaktujte mě</h2>
+            <p class="body-copy">
+              Udělejte první krok ke klidnější mysli. Na všechny dotazy
+              odpovídám do 24 pracovních hodin.
+            </p>
+          </div>
+          <div class="space-y-md">
+            <div class="flex items-center gap-md">
+              <div class="contact-icon">
+                <span class="material-symbols-outlined">mail</span>
+              </div>
+              <span class="body-copy text-on-surface"
+              >hello@serenemind.com</span
+              >
+            </div>
+            <div class="flex items-center gap-md">
+              <div class="contact-icon">
+                <span class="material-symbols-outlined">call</span>
+              </div>
+              <span class="body-copy text-on-surface">(555) 123-4567</span>
+            </div>
+            <div class="flex items-start gap-md">
+              <div class="contact-icon">
+                <span class="material-symbols-outlined">location_on</span>
+              </div>
+              <span class="body-copy text-on-surface"
+              >1200 Serenity Way, Suite 400<br />Santa Monica, CA
+                    90401</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-8 form-card atmospheric-shadow">
+          <form class="grid grid-cols-1 md:grid-cols-2 gap-md">
+            <div class="space-y-xs">
+              <label class="form-label">Jméno a příjmení</label>
+              <input
+                class="form-control"
+                placeholder="Jana Nováková"
+                type="text"
+              />
+            </div>
+            <div class="space-y-xs">
+              <label class="form-label">E-mail</label>
+              <input
+                class="form-control"
+                placeholder="jana@priklad.cz"
+                type="email"
+              />
+            </div>
+            <div class="md:col-span-2 space-y-xs">
+              <label class="form-label">Předmět zájmu</label>
+              <select class="form-control">
+                <option>Individuální terapie</option>
+                <option>Párové poradenství</option>
+                <option>Obecný dotaz</option>
+              </select>
+            </div>
+            <div class="md:col-span-2 space-y-xs">
+              <label class="form-label">Zpráva</label>
+              <textarea
+                class="form-control"
+                placeholder="Jak vám mohu dnes pomoci?"
+                rows="4"
+              ></textarea>
+            </div>
+            <div class="md:col-span-2 pt-base">
+              <button
+                class="button button--primary w-full md:w-auto atmospheric-shadow"
+                type="submit"
+              >
+                Odeslat zprávu
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- Footer -->
+<footer class="dark:bg-surface-container-highest w-full py-md">
+  <div class="w-full py-md bg-transparent">
+    <div
+      class="grid grid-cols-1 md:grid-cols-3 gap-md px-gutter max-w-max-width-desktop mx-auto"
+    >
+      <div class="space-y-sm">
+        <p class="font-headline-sm text-headline-sm text-primary">
+          Lenka Hermanová Psychologie
+        </p>
+        <p
+          class="font-label-sm text-label-sm text-secondary dark:text-secondary-fixed"
+        >
+          © 2026
+        </p>
+      </div>
+      <div class="space-y-sm">
+        <p
+          class="font-label-md text-label-md text-on-surface uppercase tracking-widest"
+        >
+          Profesionální certifikace
+        </p>
+        <ul class="space-y-xs">
+          <li class="flex items-center gap-xs text-on-surface-variant">
+                <span
+                  class="material-symbols-outlined text-primary text-label-sm"
+                >verified</span
+                >
+            <span class="font-label-sm text-label-sm"
+            >Certifikovaný psycholog</span
+            >
+          </li>
+          <li class="flex items-center gap-xs text-on-surface-variant">
+                <span
+                  class="material-symbols-outlined text-primary text-label-sm"
+                >school</span
+                >
+            <span class="font-label-sm text-label-sm"
+            >PhD v oboru klinické psychologie</span
+            >
+          </li>
+          <li class="flex items-center gap-xs text-on-surface-variant">
+                <span
+                  class="material-symbols-outlined text-primary text-label-sm"
+                >groups</span
+                >
+            <span class="font-label-sm text-label-sm">Členka APA</span>
+          </li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-xs">
+        <a
+          class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300"
+          href="#"
+        >Zásady ochrany osobních údajů</a
+        >
+        <a
+          class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300"
+          href="#"
+        >Podmínky užití</a
+        >
+        <a
+          class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300"
+          href="#"
+        >Profesionální certifikace</a
+        >
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
