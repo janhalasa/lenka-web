@@ -308,6 +308,16 @@
   margin-left: 2rem;
 }
 
+.faq-section {
+  padding-block: 40px;
+}
+.faq-section:nth-child(1 of .faq-section) {
+  padding-top: 80px;
+}
+.faq-section:nth-last-child(1 of .faq-section) {
+  padding-bottom: 80px;
+}
+
 @media (max-width: 768px) {
   .service-card,
   .card-with-text {
