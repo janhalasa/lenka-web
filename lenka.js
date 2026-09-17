@@ -146,7 +146,8 @@ const initSmoothScroll = () => {
     });
 
     // Brand name scroll to top logic
-    document.querySelectorAll(".brand-link").forEach((brandLink) => {
+    document.querySelectorAll(".brand-link-index").forEach((brandLink) => {
+        if (!brandLink.href) return;
         brandLink.addEventListener("click", function (e) {
             e.preventDefault();
 
