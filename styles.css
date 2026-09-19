@@ -303,6 +303,7 @@
 }
 .hero-section-faq .section-picture > div {
   max-height: 12rem;
+  opacity: 0.8;
 }
 .hero-section-faq h1 {
   margin-left: 2rem;
@@ -340,8 +341,8 @@
   .hero-section-faq {
     padding-top: 9rem;
   }
-  .hero-section-faq .section-picture {
-    display: none;
+  .hero-section-faq .content-grid {
+    gap: 20px;
   }
   .hero-section-faq h1 {
     text-align: center;
