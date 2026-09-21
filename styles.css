@@ -166,7 +166,6 @@
 /* Cards and repeated content blocks */
 .service-card,
 .card-with-text {
-  border: 1px solid #e9e8e6;
   border-radius: 12px;
   background: #fff;
   padding: 48px;
