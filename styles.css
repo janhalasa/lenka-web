@@ -330,7 +330,17 @@
   padding-bottom: 80px;
 }
 
-@media (max-width: 768px) {
+.small-box-with-image {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.small-box-with-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
   .service-card,
   .card-with-text {
     padding: 32px;
@@ -358,6 +368,9 @@
   .hero-section-faq h1 {
     text-align: center;
     margin-left: 0;
+  }
+  .approach-section .pictures-block {
+    display: none;
   }
 }
 
