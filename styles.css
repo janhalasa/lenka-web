@@ -35,7 +35,7 @@
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
-  gap: 80px;
+  gap: 64px;
 }
 
 @media (min-width: 768px) {
@@ -330,11 +330,6 @@
   padding-bottom: 80px;
 }
 
-.small-box-with-image {
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-}
 .small-box-with-image img {
   height: 100%;
   object-fit: cover;
