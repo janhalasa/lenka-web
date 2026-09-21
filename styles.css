@@ -253,7 +253,12 @@
 }
 
 .hero-section .cover-image {
+  transition: opacity .5s ease-out;
   opacity: 0.8;
+}
+
+.hero-section .cover-image:hover {
+  opacity: 1;
 }
 
 .form-card {
