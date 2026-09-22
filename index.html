@@ -533,14 +533,24 @@
             </p>
           </div>
           <div class="flex flex-col gap-xs">
-            <a
-              class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300"
-              href="#"
-              >Zásady ochrany osobních údajů</a
-            >
+            <div class="text-on-surface-variant">
+              <button command="show-modal" commandfor="personal-data-dialog">Ochrana osobních údajů</button>
+            </div>
           </div>
         </div>
       </div>
+      <dialog id="personal-data-dialog">
+        <header class="bg-surface-container-low">
+          <h2>Ochrana osobních údajů</h2>
+          <button commandfor="personal-data-dialog" command="close"><span class="material-symbols-outlined text-3xl">close</span></button>
+        </header>
+        <div class="dialog-body">
+          <p>Sem vložiť text o ochrane osobných údajov</p>
+        </div>
+        <footer class="bg-surface-container-low">
+          <button commandfor="personal-data-dialog" command="close">Zavřít</button>
+        </footer>
+      </dialog>
     </footer>
   </body>
 </html>

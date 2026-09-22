@@ -403,3 +403,43 @@ a.link-basic:hover {
     /*margin-left: 8rem;*/
   }
 }
+
+::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1rem;
+}
+
+dialog > header h2 {
+  font-family: "Source Serif 4", serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+dialog > .dialog-body {
+  padding: 1rem;
+}
+dialog > footer {
+  text-align: center;
+  padding: .75rem 1rem;
+  display: flex;
+}
+dialog > footer > button {
+  flex-grow: 1;
+}
+
+dialog[open] {
+  border: 0;
+  border-radius: 1rem;
+  width: 52rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
