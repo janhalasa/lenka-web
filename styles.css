@@ -266,8 +266,6 @@ a.link-basic:hover {
 }
 
 .hero-section .cover-image {
-  transition: opacity .5s ease-out;
-  opacity: 0.8;
 }
 
 .hero-section .cover-image:hover {
