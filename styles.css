@@ -404,10 +404,6 @@ a.link-basic:hover {
   }
 }
 
-::backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 dialog > header {
   display: flex;
   justify-content: space-between;
@@ -423,6 +419,7 @@ dialog > header h2 {
 
 dialog > .dialog-body {
   padding: 1rem;
+  overflow: auto;
 }
 dialog > footer {
   text-align: center;
@@ -437,9 +434,16 @@ dialog[open] {
   border: 0;
   border-radius: 1rem;
   width: 52rem;
-  max-width: 90vw;
-  max-height: 90vh;
-  overflow: auto;
+  max-width: 94vw;
+  max-height: 96vh;
   display: flex;
   flex-direction: column;
+  overscroll-behavior: contain;
+}
+
+::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+body:has(dialog[open]) {
+  overflow: hidden;
 }
