@@ -373,7 +373,7 @@ body > header {
 @media (max-width: 767px) {
   .service-card,
   .card-with-text {
-    padding: 32px;
+    padding: 24px;
     transition: transform 500ms;
   }
 
@@ -393,6 +393,7 @@ body > header {
   .hero-section .hero-actions {
     justify-content: center;
   }
+
 
   .page-section.page-section-cardless > .page-container {
     padding-inline: 32px;
