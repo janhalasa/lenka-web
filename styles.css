@@ -488,3 +488,7 @@ dialog[open] {
 body:has(dialog[open]) {
   overflow: hidden;
 }
+.academic-title {
+  color: #5e7054;
+  font-size: smaller;
+}
