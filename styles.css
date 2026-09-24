@@ -200,6 +200,9 @@ a.link-basic:hover {
   gap: 24px;
   margin-bottom: 24px;
 }
+.service-card-content p:has(+*) {
+  margin-bottom: 1em;
+}
 
 .service-desc {
   color: var(--text-color-secondary);
@@ -387,7 +390,7 @@ body > header.header-scrolled-down {
   }
 
   .hero-section-faq {
-    padding-top: 9rem;
+    padding-top: 8rem;
   }
   .hero-section-faq .content-grid {
     gap: 20px;
@@ -395,7 +398,12 @@ body > header.header-scrolled-down {
   .hero-section-faq h1 {
     text-align: center;
     margin-left: 0;
+    margin-bottom: 3rem;
   }
+  .hero-text-part, .hero-text-part p.body-copy {
+    text-align: center;
+  }
+
   .approach-section .pictures-block {
     display: none;
   }
