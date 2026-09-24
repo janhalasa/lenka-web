@@ -340,8 +340,12 @@ a.link-basic:hover {
 body > header {
   height: 5rem;
 }
-body > header.header-scrolled-down {
+#index-page > header.header-scrolled-down {
   height: 4rem;
+}
+#index-page > header:not(.header-scrolled-down) .branding {
+  opacity: 0;
+  transition: opacity 500ms;
 }
 
 .hero-section {
@@ -378,7 +382,12 @@ body > header.header-scrolled-down {
   }
 
   .hero-section {
-    padding-top: 6rem;
+    padding-top: 4rem;
+  }
+
+  #index-page > header:not(.header-scrolled-down) {
+    border-bottom: 0;
+    box-shadow: none;
   }
 
   .hero-section .hero-actions {
