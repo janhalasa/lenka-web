@@ -1,5 +1,9 @@
 /* Reusable page patterns. Keep one-off layout and responsive details in HTML. */
 
+html {
+  --text-color-secondary: #747872;
+}
+
 a.link-basic, a.link-basic:visited, a.link-basic:active {
   --link-color: #004f90;
   text-decoration: none;
@@ -127,7 +131,7 @@ a.link-basic:hover {
 }
 
 .button--outline {
-  border: 1px solid #747872;
+  border: 1px solid var(--text-color-secondary);
   color: #434843;
 }
 
@@ -195,6 +199,10 @@ a.link-basic:hover {
   align-items: center;
   gap: 24px;
   margin-bottom: 24px;
+}
+
+.service-desc {
+  color: var(--text-color-secondary);
 }
 
 .icon-badge {
@@ -277,7 +285,7 @@ a.link-basic:hover {
 }
 .hero-subtitle {
   margin-block: 2rem !important;
-  color: #747872;
+  color: var(--text-color-secondary);
 }
 
 .form-card {
@@ -306,7 +314,7 @@ a.link-basic:hover {
 .form-control {
   width: 100%;
   border: 0;
-  border-bottom: 1px solid #747872;
+  border-bottom: 1px solid var(--text-color-secondary);
   border-radius: 8px 8px 0 0;
   background: #f4f3f1;
   padding: 12px;
@@ -391,10 +399,15 @@ body > header.header-scrolled-down {
   .approach-section .pictures-block {
     display: none;
   }
+
+  .icon-badge {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .address-hint {
-  color: #747872;
+  color: var(--text-color-secondary);
 }
 
 #google-maps-iframe {
