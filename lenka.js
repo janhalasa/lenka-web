@@ -198,11 +198,11 @@ const initMobileMenu = () => {
     window.addEventListener("scroll", () => {
         const header = document.querySelector("header");
         if (window.scrollY > 50) {
-            header.classList.add("h-16", "shadow-md");
-            header.classList.remove("h-20", "shadow-sm");
+            header.classList.add("header-scrolled-down", "shadow-md");
+            header.classList.remove("shadow-sm");
         } else {
-            header.classList.add("h-20", "shadow-sm");
-            header.classList.remove("h-16", "shadow-md");
+            header.classList.add("shadow-sm");
+            header.classList.remove("header-scrolled-down", "shadow-md");
         }
     });
 

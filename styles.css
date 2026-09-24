@@ -326,7 +326,14 @@ a.link-basic:hover {
   padding-inline-start: 2rem;
 }
 
-.hero-section-faq {
+body > header {
+  height: 5rem;
+}
+body > header.header-scrolled-down {
+  height: 4rem;
+}
+
+.hero-section {
   padding-top: 7rem;
 }
 .hero-section-faq .section-picture > div {
@@ -355,8 +362,12 @@ a.link-basic:hover {
     transition: transform 500ms;
   }
 
+  body > header {
+    height: 4rem;
+  }
+
   .hero-section {
-    padding-top: 7rem;
+    padding-top: 6rem;
   }
 
   .hero-section .hero-actions {
