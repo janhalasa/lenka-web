@@ -493,3 +493,21 @@ body:has(dialog[open]) {
   color: #5e7054;
   font-size: smaller;
 }
+
+.top-menu {
+  display: none;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .top-menu {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .top-menu {
+    gap: 2rem;
+  }
+}
