@@ -225,7 +225,7 @@ const initReserveButtons = () => {
     const reserveBtns = document.querySelectorAll(".reserve-btn");
     reserveBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
-            document.location.href = 'index.html#contact';
+            document.location.href = 'index.html#kontakt';
             toggleMenu(false);
         });
     });
