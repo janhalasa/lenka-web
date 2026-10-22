@@ -511,3 +511,7 @@ body:has(dialog[open]) {
     gap: 2rem;
   }
 }
+
+.portrait-container {
+  background-color: #5c5a51;
+}
